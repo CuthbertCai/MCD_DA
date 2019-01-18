@@ -2,7 +2,6 @@ import numpy as np
 import gzip
 import cPickle
 
-
 def load_usps(all_use=False):
     f = gzip.open('data/usps_28x28.pkl', 'rb')
     data_set = cPickle.load(f)

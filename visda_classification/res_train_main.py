@@ -205,7 +205,7 @@ def train(num_epoch):
                 F1.train()
                 F2.train()
 
-def test(epoch):
+def test(epoch, val= False):
     G.eval()
     F1.eval()
     F2.eval()

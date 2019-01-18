@@ -181,7 +181,7 @@ class Solver(object):
             loss_s1 = criterion(output_s1, label_s)
             loss_s2 = criterion(output_s2, label_s)
             loss_s = loss_s1 + loss_s2
-            loss_s.backward(retain_variables=True)
+            loss_s.backward(retain_graph=True)
             feat_t = self.G(img_t)
             self.C1.set_lambda(1.0)
             self.C2.set_lambda(1.0)

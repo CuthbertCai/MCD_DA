@@ -1,8 +1,8 @@
 import torch.utils.data
-import torchnet as tnt
-from builtins import object
+# import torchnet as tnt
+# from builtins import object
 import torchvision.transforms as transforms
-from datasets import Dataset
+from .datasets import Dataset
 
 
 class PairedData(object):
@@ -21,7 +21,7 @@ class PairedData(object):
         self.iter = 0
         return self
 
-    def __next__(self):
+    def next(self):
         A, A_paths = None, None
         B, B_paths = None, None
         try:

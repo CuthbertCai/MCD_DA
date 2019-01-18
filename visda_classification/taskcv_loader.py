@@ -3,7 +3,7 @@ import torch.utils.data
 import torchvision.transforms as transforms
 #import torchnet as tnt
 # pip install future --upgrade
-from builtins import object
+# from builtins import object
 from pdb import set_trace as st
 import torch.utils.data as data_utils
 class PairedData(object):
@@ -23,7 +23,7 @@ class PairedData(object):
         self.iter = 0
         return self
 
-    def __next__(self):
+    def next(self):
         A, A_paths = None, None
         B, B_paths = None, None
         try:
